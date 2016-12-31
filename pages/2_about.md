@@ -9,6 +9,7 @@ permalink: /about/
 
 ## Name
 だいたいこの2つの名前を使ってます
+
 - 6RA
 - hanarchy
 
