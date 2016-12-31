@@ -1,0 +1,33 @@
+<footer class="main_footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <!--<a href="mailto:{{ site.email }}"><span class="glyphicon glyphicon-envelope"></span> {{ site.email }}</a>-->
+        <!--<span class="point"> · </span>-->
+        {% if site.github_username %}
+          <a href="https://github.com/{{ site.github_username }}">
+            <i class="fa fa-github" aria-hidden="true"></i>
+            Github
+            <!-- <span>{{ site.github_username }}</span> -->
+          </a>
+          {% endif %}
+
+        {% if site.twitter_username %}
+        <span class="point"> · </span>
+          <a href="https://twitter.com/{{ site.twitter_username }}">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+            Twitter
+          </a>
+        {% endif %}
+          <!--<span class="point"> · </span>-->
+          <!--<span><a href="{{ site.viewsourceroot }}{{ page.path }}">View source</a></span>-->
+          <!--<span class="point"> · </span>-->
+          <!--<span><a class="newpost" href="javascript:;">New post</a></span>-->
+		  <span class="point"> · </span>
+          <span><a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a></span>
+          <span class="point"> · </span>
+          <span>&copy; 2016 hanarchy powerd by Jekyll, theme by LiXizhi</span>
+      </div>
+    </div>
+  </div>
+</footer>

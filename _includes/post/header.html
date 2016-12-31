@@ -1,0 +1,39 @@
+<header>
+    <div class="post-title">
+        <h1>
+            {% if post %}
+                {{ post.title }}
+            {% else %}
+                {{ page.title }}
+            {% endif %}
+        </h1>
+    </div>
+    <p class="post-date">
+        <i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;
+        <time>
+        {% if post %}
+            {{ post.date | date: "%b %-d, %Y" }}{% if post.author %} • {{ post.author }}{% endif %}{% if post.meta %} • {{ post.meta }}{% endif %}
+        {% else %}
+            {{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}
+        {% endif %}
+        </time>
+        &nbsp;
+        <!-- category -->
+        {% include post/categories.html %}
+
+        <!-- tag -->
+        {% if post %}
+            {% assign tags = post.tags %}
+        {% else %}
+            {% assign tags = page.tags %}
+        {% endif %}
+        {% assign tags_size = tags | size %}
+        {% if tags_size > 0 %}
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            {% for tag in tags%}
+                {{tag}},
+            {% endfor %}
+        {% endif %}
+    </p>
+</header>
+<!--<hr>-->

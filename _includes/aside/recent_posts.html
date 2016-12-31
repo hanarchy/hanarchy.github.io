@@ -1,0 +1,13 @@
+<div class="post-title">
+
+    <h3>Recent Posts</h3>
+</div>
+<section class="post-area recent_post aside">
+    <ul id="recent_posts">
+        {% for post in site.posts limit: site.recent_posts %}
+        <li>
+            <a class="btn btn-recent_posts" href="{{ root_url }}{{ post.url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</section>

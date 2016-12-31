@@ -1,0 +1,12 @@
+{% if post %}
+    {% assign cat = post.categories[0] %}
+{% else %}
+    {% assign cat = page.categories[0] %}
+{% endif %}
+
+{% if cat == "tensorflow" %}
+    <i class="fa fa-database" aria-hidden="true"></i>
+{% else %}
+    <i class="fa fa-file-text" aria-hidden="true"></i>
+{% endif %}
+&nbsp;{{cat}}

@@ -1,0 +1,65 @@
+---
+# homeページ
+layout: default
+---
+<!-- blog title -->
+<div class="row">
+  <div id="myArticle" class="col-sm-12">
+    <div class="blogtitle">
+      <article>
+        {{content}}
+      </article>
+    </div>
+  </div>
+</div>
+
+<p><br/></p>
+
+<div id="index" class="row">
+  <main class="col-sm-9">
+    <div class="post-title">
+      <h1>Posts</h1>
+    </div>
+    <div class="post-area">
+
+      <div class="post-list-body">
+        <div class="all-posts" post-cate="All">
+          {% for post in site.posts %}
+          <a class="post-list-item btn btn-recent_posts" href="{{ post.url | prepend: site.baseurl }}">
+            <h3>
+              {{ post.title }}
+            </h3>
+            <span class="">{{ post.date | date: "%b %-d, %Y" }}</span>
+          </a>
+          {% endfor %}
+        </div>
+        <!-- <div class="posts-in-categories"> -->
+        {% for category in site.categories %}
+        <div post-cate="{{category | first}}">
+          {% for posts in category  %}
+          {% for post in posts %}
+          {% if post.url %}
+          <a href="{{ post.url }}" class="post-list-item btn btn-recent_posts">
+            <h3>
+              {{ post.title }}
+            </h3>
+            <span class="">{{ post.date | date: "%b %-d, %Y" }}</span>
+          </a>
+          {% endif %}
+          {% endfor %}
+          {% endfor %}
+        </div>
+        {% endfor %}
+        <!-- </div> -->
+      </div>
+    </div>
+  </main>
+  <aside class="col-sm-3">
+    {% include aside/about.html %}
+
+    {% include aside/categories.html%}
+
+    {% include aside/recent_posts.html %}
+  </aside>
+</div>
+

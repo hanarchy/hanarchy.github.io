@@ -1,0 +1,13 @@
+<div class="post-title">
+    <h3>Categories</h3>
+</div>
+<section class="post-area hidden-xs aside">
+    <a href="javascript:;" class="btn categories-list-item btn-recent_posts" cate="All">
+        All<span class="my-badge"> {{site.posts | size}}</span>
+    </a>
+    {% for category in site.categories %}
+    <a href="javascript:;" class="btn categories-list-item btn-recent_posts" cate="{{ category | first }}">
+        {{ category | first }} <span class="my-badge">{{ category | last | size }}</span>
+    </a>
+    {% endfor %}
+</section>

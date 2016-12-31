@@ -1,0 +1,9 @@
+{% include post/header.html %}
+<div class="post-area post post-margin">
+    <article>
+        {{ post.excerpt }}
+    </article>
+    <footer class="more">
+        <a class="btn btn-more" href="{{post.url}}"><span>{{site.excerpt_link}}</span></a>
+    </footer>
+</div>

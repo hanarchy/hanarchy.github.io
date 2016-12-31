@@ -1,0 +1,33 @@
+---
+layout: default
+---
+<div class="row">
+  <div id="myArticle" class="col-sm-9">
+    <div class="post-title">
+      <h1>{{page.title}}</h1>
+    </div>
+    <div class="post-area post">
+      <article>
+        {{content}}
+      </article>
+        {% unless page.share == False%}
+          <hr>
+          {% include share.html%}
+        {% endunless %}
+    </div>
+    {% unless page.comment == False %}
+	    {% include comments.html %}
+    {% endunless %}
+  </div>
+  <div id="content" class="col-sm-3">
+    <!-- <div id="myAffix" class="shadow-bottom-center hidden-xs" data-spy="affix" data-offset-top="0" data-offset-bottom="-20"> -->
+    <div id="myAffix" class="post-area aside hidden-xs" >
+      <div class="post-title">
+        <h3>
+          Content
+        </h3>
+      </div>
+      <div class="content-text"></div>
+    </div>
+  </div>
+</div>
