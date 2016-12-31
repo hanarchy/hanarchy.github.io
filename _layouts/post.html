@@ -4,7 +4,7 @@ layout: default
 <div class="row">
   <main class="col-sm-9">
     {% include post/header.html %}
-    <div class="post-area post">
+    <div class="post-area post post-margin">
 
       <article>
         {{content}}
@@ -30,7 +30,6 @@ layout: default
         </div>
       {% endif %}
     </div>
-    <p><br/></p>
     <div class="post-title">
       <h1>Comments</h1>
     </div>
@@ -40,13 +39,6 @@ layout: default
     {% endunless %}
   </main>
 
-    <!-- <div id="myAffix" class="shadow-bottom-center hidden-xs" data-spy="affix" data-offset-top="0" data-offset-bottom="-20"> -->
-    <!--<div id="myAffix" class="shadow-bottom-center hidden-xs" >-->
-      <!--<div class="categories-list-header">-->
-        <!--Content-->
-      <!--</div>-->
-      <!--<div class="content-text"></div>-->
-    <!--</div>-->
   <aside class="col-sm-3">
     {% for aside in site.default_aside %}
       {% include {{aside}} %}
