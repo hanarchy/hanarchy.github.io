@@ -13,10 +13,6 @@ permalink: /about/
 - 6RA
 - hanarchy
 
-## Major
-機械寄りのメカトロニクス
-
-半導体製造装置の機械設計開発（2017年4月～）
 
 ## SNS
 
