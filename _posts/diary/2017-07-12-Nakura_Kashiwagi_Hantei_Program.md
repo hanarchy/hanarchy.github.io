@@ -11,6 +11,7 @@ share: true
 
 ということで、上記webappが完成しましたのでそのご報告です。
 django+gunicorn+nginxで構成してます。
+コードは[こちら](https://github.com/hanarchy/NakuraKashiwagiHanteiProgram)です
 
 前回から随分間が空いてしまいましたが、なんとか完成に漕ぎ着けることができました。(実働数時間、要はやる気が出なかった)
 
