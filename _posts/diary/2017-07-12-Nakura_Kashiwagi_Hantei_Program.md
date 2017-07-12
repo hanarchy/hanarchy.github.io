@@ -7,7 +7,7 @@ comments: true
 share: true
 ---
 
-[奈倉柏木判定プログラム](http://nakura-kashiwagi.hanarchy.biz)
+[奈倉柏木判定プログラム(nakura-kashiwagi.hanarchy.biz)](http://nakura-kashiwagi.hanarchy.biz)
 
 ということで、上記webappが完成しましたのでそのご報告です。
 django+gunicorn+nginxで構成してます。
