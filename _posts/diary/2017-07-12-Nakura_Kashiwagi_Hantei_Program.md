@@ -9,9 +9,7 @@ share: true
 
 [前回の記事：Tensorflowを用いた機械学習による、週刊実話wjn「[実録]女のSEX告白」書き手予測](http://hanarchy.biz/blog/2017/01/08/detect_wjn_author/)
 
-[奈倉柏木判定プログラム(nakura-kashiwagi.hanarchy.biz)](http://nakura-kashiwagi.hanarchy.biz)
-
-ということで、上記webappが完成しましたのでそのご報告です。
+ということで、[奈倉柏木判定プログラム(nakura-kashiwagi.hanarchy.biz)](http://nakura-kashiwagi.hanarchy.biz)が完成しましたのでそのご報告です。
 django+gunicorn+nginxで構成してます。
 コードは[こちら](https://github.com/hanarchy/NakuraKashiwagiHanteiProgram)です
 
