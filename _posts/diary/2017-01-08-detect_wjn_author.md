@@ -92,16 +92,6 @@ wjnから記事本文を取得します。
 
 google検索で`site:wjn.jp/article/detail "官能小説作家書き下ろし"`という風にやると2000件程度出てきたので、データ数を増やす余地があります。
 
-詰まった点としては、BeautifulSoupを用いてパースするときにはreqesutsなりurllib.requestなりを用いてhtmlを取得することになりますが、
-wjnから取得する際、userAgentを適当に指定する必要があったので、その部分のコードを記載しておきます。
-
-```python
-import requests
-from bs4 import BeautifulSoup
-
-html = requests.get(url, headers={'User-Agent': 'test'})
-soup = BeautifulSoup(html.content,"html5lib", from_encoding='Shift-JIS')
-```
 
 ## 文章からベクトルへ
 さて、抜き出した本文の文章からニューラルネットに入れるにはどのようにしたらよいでしょうか。
